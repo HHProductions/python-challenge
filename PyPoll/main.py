@@ -8,15 +8,11 @@ import csv
 csvpath = os.path.join('Resources', 'election_data.csv')
 
 # open csv file
-
-with open(csvpath) as csvfile:
-
-    # CSV reader specifies delimiter and variable that holds contents
-    DataSummary = csv.reader(csvfile, delimiter=',')
+# CSV reader specifies delimiter and variable that holds contents
     
 with open(csvpath) as csvfile2:
     DataSummary2 = csv.reader(csvfile2, delimiter=',')
-    next(DataSummary2)
+    csv_header = next(DataSummary2)
 
 # Create list of county and candidate
     County, Candidate = [], []
